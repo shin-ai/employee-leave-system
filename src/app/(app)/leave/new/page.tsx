@@ -37,12 +37,8 @@ export default function NewLeavePage() {
       LeaveStorageService.createLeaveRequest(data);
       toast.success("Leave request submitted successfully");
       router.push(ROUTES.LEAVE);
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error("Failed to submit leave request");
-      }
+    } catch {
+      toast.error("Gagal mengajukan cuti. Silakan coba lagi.");
     } finally {
       setIsSubmitting(false);
     }

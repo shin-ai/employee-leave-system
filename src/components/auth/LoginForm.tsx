@@ -53,7 +53,7 @@ export function LoginForm() {
       if (success) {
         router.replace(ROUTES.DASHBOARD);
       } else {
-        setError("Invalid credentials. Hint: try admin / admin123");
+        setError("Email atau password salah. Silakan coba lagi.");
       }
     } catch {
       setError("An unexpected error occurred.");
@@ -82,7 +82,7 @@ export function LoginForm() {
                     <FormLabel>Username / Email</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="admin"
+                        placeholder="Masukkan email Anda"
                         type="text"
                         {...field}
                       />

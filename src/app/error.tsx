@@ -28,11 +28,8 @@ export default function ErrorPage({
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            A runtime error occurred in the application. We've been notified and are looking into it.
+            Terjadi kesalahan pada aplikasi. Silakan coba lagi atau hubungi administrator.
           </p>
-          <div className="rounded-md bg-background p-3 text-left text-xs font-mono text-muted-foreground shadow-inner border">
-            {error.message || "Unknown error"}
-          </div>
           <div className="pt-4">
             <Button onClick={reset} className="w-full">
               Try again

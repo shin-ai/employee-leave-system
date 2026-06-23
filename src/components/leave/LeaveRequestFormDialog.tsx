@@ -139,12 +139,8 @@ export function LeaveRequestFormDialog({
       toast.success("Leave request submitted successfully");
       onSave();
       onOpenChange(false);
-    } catch (error) {
-      if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error("Failed to submit leave request");
-      }
+    } catch {
+      toast.error("Gagal mengajukan cuti. Silakan coba lagi.");
     } finally {
       setIsSubmitting(false);
     }
